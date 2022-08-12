@@ -1,0 +1,116 @@
+body {
+  background: rgba(73, 155, 234, 1);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#499bea', endColorstr='#207ce5', GradientType=1 );
+}
+
+.App {
+  margin: auto;
+  margin-top: 10%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+}
+
+.Clock {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(
+    circle at center,
+    rgb(252, 205, 77, 1),
+    rgba(12, 6, 6, 0.795)
+  );
+  transform-origin: left bottom;
+  border-radius: 145px;
+  border: gray solid 2px;
+}
+#hour,
+#minute {
+  position: absolute;
+  width: 1%;
+  height: 23%;
+  top: 23.5%;
+  left: 49%;
+  transform-origin: bottom;
+  background-color: aliceblue;
+  border-top: solid 10px red;
+}
+#minute {
+  height: 30%;
+  top: 15.7%;
+  left: 50%;
+  z-index: 0.4;
+}
+#second {
+  position: absolute;
+  width: 1%;
+  height: 35%;
+  top: 15%;
+  left: 50%;
+  background-color: red;
+  transform-origin: bottom;
+  z-index: 0.5;
+}
+
+.Clock .block {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: rgb(165, 178, 190);
+  transform: translateX(147px) translateY(144px);
+  z-index: 1;
+}
+
+.Clock .numbers {
+  --angle: 0;
+  position: absolute;
+  font-size: 25px;
+  font-family: sans-serif;
+  color: rgb(250, 249, 245);
+  transform: rotate(var(--angle));
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.Clock .num_1 {
+  --angle: 30deg;
+}
+.Clock .num_2 {
+  --angle: 60deg;
+}
+.Clock .num_3 {
+  --angle: 90deg;
+}
+.Clock .num_4 {
+  --angle: 120deg;
+}
+.Clock .num_5 {
+  --angle: 150deg;
+}
+.Clock .num_6 {
+  --angle: 0deg;
+  transform: translateY(272px);
+}
+.Clock .num_7 {
+  --angle: 210deg;
+}
+.Clock .num_8 {
+  --angle: 240deg;
+}
+.Clock .num_9 {
+  --angle: 270deg;
+}
+.Clock .num_10 {
+  --angle: 300deg;
+}
+.Clock .num_11 {
+  --angle: 330deg;
+}
+#copyright {
+  font-size: 10px;
+  color: rgb(235, 222, 207);
+  transform: translateY(-290px) translateX(135px);
+}
